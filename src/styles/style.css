@@ -7,6 +7,7 @@
   --twitter-color: #00aced;
   --linkedin-color: #0073a4;
   --github-color: #5a32a3;
+	--background-color: hsla(15, 1%, 13%, 0.55);
 }
 
 * {
@@ -271,7 +272,6 @@ main {
 */
 
 .resto {
-	/* left: 0; */
   width: 100vw;
   margin: 0 auto;
   padding: 2em 0;
@@ -284,10 +284,71 @@ main {
 }
 
 .resto__container {
-  /* width: 90vw; */
-  /* margin: 0 auto; */
+  width: 90vw;
+  margin: 0 auto;
 }
 
+.resto__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.resto__info {
+  position: relative;
+  top: -4em;
+  z-index: 1;
+  background-color: transparent;
+  padding: .5em 0 .5em 1.5em;
+  color: var(--white-color);
+  font-size: large;
+  text-shadow: 1px 1px var(--text-color);
+	background-color: var(--background-color);
+	width: 9vw;
+}
+
+.resto__selector {
+	text-decoration: none;
+}
+
+.resto__title {
+  margin: 0.5em 0;
+  color: var(--primary-color);
+	text-decoration: none
+}
+
+.resto__about {
+  margin: 0.5em 0;
+}
+
+.resto__about,
+.resto__description {
+  color: var(--text-color);
+}
+
+/* 
+	Figure
+ */
+
+figure {
+  margin: 2em .5em;
+  border: 1px solid #f1f1f1;
+  padding: 10px;
+}
+
+figure img {
+  width: 100%;
+  height: 330px;
+  object-fit: cover;
+}
+
+figure:hover {
+  box-shadow: 5px 5px 11px #d9d9d9,
+    -5px -5px 11px #e7e7e7;
+}
+
+figure p {
+  line-height: 1.5em;
+}
 
 /*
   Footer
