@@ -1,11 +1,36 @@
 import UrlParser from '../../routes/url-parser';
 import RestoDBSource from '../../data/resto-source';
-import { createHeroTemplate } from '../templates/template-creator';
+import {
+  createHeroTemplate,
+  createRestoItemTemplate,
+  createAvailableFoodsMenu,
+  createAvailableDrinksMenu,
+  createCustomerReview
+} from '../templates/template-creator';
 
 const Detail = {
   async render() {
      return `
-      <div id="resto" class="resto"> </div>
+      <div id="resto"> </div>
+      <section class="resto">
+        <div class="resto__container">
+          <h2 class="resto__label"> Available Foods Menu </h2>
+            <div class="resto__list__menu" id="foodsMenu">
+            </div>
+        </div>
+        <div class="resto__container resto__container__drinks">
+          <h2 class="resto__label"> Available Drinks Menu </h2>
+          <div class="resto__list__menu" id="drinksMenu">
+          </div>
+        </div>
+        <div class="resto__container">
+          <h2 class="resto__label"> What people says about us! </h2>
+          <div id="comentar">
+            <div class="reviewer" id="review">
+            </div>
+          </div>
+        </div>
+      </section>
     `;
   },
  
@@ -13,9 +38,26 @@ const Detail = {
     const url = UrlParser.parseActiveUrlWithoutCombiner();
     const detailResto = await RestoDBSource.detailResto(url.id);
 
-    console.log(detailResto);
+    console.log(detailResto.restaurant.menus.foods);
     const restoContainer = document.querySelector('#resto');
-    restoContainer.innerHTML +=  createHeroTemplate(detailResto);
+    restoContainer.innerHTML += createHeroTemplate(detailResto);
+    
+    const foodsMenuContainer = document.querySelector('#foodsMenu');
+    detailResto.restaurant.menus.foods.forEach((food) => {
+      foodsMenuContainer.innerHTML += createAvailableFoodsMenu(food);
+    });
+    
+    const drinksMenuContainer = document.querySelector('#drinksMenu');
+    detailResto.restaurant.menus.drinks.forEach((drink) => {
+      console.log(drink);
+      drinksMenuContainer.innerHTML += createAvailableDrinksMenu(drink);
+    })
+    
+    const reviewerContainer = document.querySelector("#review");
+    detailResto.restaurant.customerReviews.forEach((review) => {
+      console.log(review);
+      reviewerContainer.innerHTML += createCustomerReview(review);
+    });
   },
 };
  

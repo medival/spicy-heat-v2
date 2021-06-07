@@ -4,32 +4,63 @@ const createHeroTemplate = (resto) => `
 	<section class="hero">
 	 <h1 class="hero__title"> ${resto.restaurant.name} </h1>
 	 <h4 class="hero__subtitle"> ${resto.restaurant.city} • ⭐️ ${resto.restaurant.rating} • ${resto.restaurant.address} </h4>
-	 <p class="hero__description"> ${resto.restaurant.description.substring(0, 150)} </p>
+	 <p class="hero__description"> ${resto.restaurant.description.substring(0, 200)} </p>
 	   <img class="hero__image" src="${CONFIG.BASE_IMAGE_URL + resto.restaurant.pictureId}" alt="${resto.name}">
 	</section>
 `;
 
 const createRestoDetailTemplate = (resto) => `
 	<section class="resto">
-      <div class="resto__container">
-        <h2 class="resto__label"> Available Foods Menu </h2>
-        <div class="resto__list__menu">
-            <figure class="resto__menu__food">
-				<img src="https://image.freepik.com/free-vector/salmon-sushi-with-chopstick-plate-cartoon-icon-illustration-japanese-food-icon-concept-isolated-flat-cartoon-style_138676-1727.jpg" alt="Food-name">
-				<h4 class="resto__info"> Food Name </h4>
-				<h4 class="resto__about"> About </h4>
+		<div class="resto__container">
+		  <h2 class="resto__label"> Available Foods Menu </h2>
+		  <div class="resto__list__menu">
+				<figure class="resto__menu__food">
+					<img src="https://image.freepik.com/free-vector/salmon-sushi-with-chopstick-plate-cartoon-icon-illustration-japanese-food-icon-concept-isolated-flat-cartoon-style_138676-1727.jpg" alt="Food-name">
+					<h4 class="resto__info"> Food Name </h4>
+					<h4 class="resto__about"> About </h4>
 		    </figure>
-        </div>
-        <h2 class="resto__label"> Available Drinks Menu </h2>
-        <div class="resto__list__menu">
-            <figure class="resto__menu__drink">
-				<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIMwcy4W3trzW4F4JrI2oT_skwzDmYugHzEg&usqp=CAU" alt="Food-name">
-				<h4 class="resto__info"> Food Name </h4>
-				<h4 class="resto__about"> About </h4>
-		    </figure>
-        </div>
-      </div>
-     </section>
+		  </div>
+		  <h2 class="resto__label"> Available Drinks Menu </h2>
+		  <div class="resto__list__menu">
+				<figure class="resto__menu__food">
+					<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIMwcy4W3trzW4F4JrI2oT_skwzDmYugHzEg&usqp=CAU" alt="Food-name">
+					<h4 class="resto__info"> Food Name </h4>
+					<h4 class="resto__about"> About </h4>
+				</figure>
+		  </div>
+		</div>
+  </section>
+`;
+
+const createAvailableFoodsMenu = (food) => `
+		<figure class="resto__menu__food">
+			<img src="https://image.freepik.com/free-vector/salmon-sushi-with-chopstick-plate-cartoon-icon-illustration-japanese-food-icon-concept-isolated-flat-cartoon-style_138676-1727.jpg" alt="Food-name">
+			<h4 class="resto__about"> ${food.name} </h4>
+		</figure>
+`;
+
+const createAvailableDrinksMenu = (drink) => `
+		<figure class="resto__menu__food">
+			<img src="https://image.freepik.com/free-vector/salmon-sushi-with-chopstick-plate-cartoon-icon-illustration-japanese-food-icon-concept-isolated-flat-cartoon-style_138676-1727.jpg" alt="Food-name">
+			<h4 class="resto__about"> ${drink.name} </h4>
+		</figure>
+`;
+
+const createCustomerReview = (review) => `
+		<div class="reviewer">
+		  <img src="https://www.pngitem.com/pimgs/m/24-248235_user-profile-avatar-login-account-fa-user-circle.png" alt="">
+		  <div class="reviewer__name">
+		    <p> ${review.name} </p>
+		  </div>
+		  <div class="reviewer__date">
+		    <p> ${review.date} </p>
+		  </div>
+		  <div class="reviewer__comentar">
+		      <textarea name="" id="" cols="18" rows="6" readonly>
+${review.review}
+		      </textarea>
+		  </div>
+		</div>
 `;
 
 const createRestoItemTemplate = (resto) => `
@@ -44,4 +75,11 @@ const createRestoItemTemplate = (resto) => `
 	</a>
 `;
 
-export { createHeroTemplate, createRestoItemTemplate, createRestoDetailTemplate };
+export {
+	createHeroTemplate,
+	createRestoItemTemplate,
+	createRestoDetailTemplate,
+	createAvailableFoodsMenu,
+	createAvailableDrinksMenu,
+	createCustomerReview
+};
