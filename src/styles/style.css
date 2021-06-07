@@ -303,7 +303,7 @@ main {
   font-size: large;
   text-shadow: 1px 1px var(--text-color);
 	background-color: var(--background-color);
-	width: 9vw;
+	width: 180px;
 }
 
 .resto__selector {
