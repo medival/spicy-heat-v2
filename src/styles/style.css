@@ -138,13 +138,14 @@ main {
   justify-content: center;
   flex-direction: column;
 	left: 0;
+	/* z-index: 2; */
 }
 
 .hero__image {
   position: absolute;
   width: 100vw;
 	height: 70vh;
-  z-index: -2;
+  z-index: 0;
   object-fit: cover;
 }
 
@@ -155,6 +156,7 @@ main {
   text-shadow: 2px 2px var(--background-color);
   text-align: center;
   letter-spacing: .1em;
+	z-index: 1;
 }
 
 .hero__subtitle {
@@ -165,6 +167,7 @@ main {
   text-align: center;
   letter-spacing: .1em;
 	width: 80vw;
+	z-index: 1;
 }
 
 .hero__description {
@@ -173,6 +176,7 @@ main {
 	font-size: large;
   text-align: center;
 	width: 80vw;
+	z-index: 1;
 }
 
 .hero__cta {
@@ -187,6 +191,7 @@ main {
   color: var(--white-color);
   font-weight: bolder;
   letter-spacing: .2em;
+	z-index: 1;
 }
 
 .hero__cta:hover {
@@ -203,6 +208,7 @@ main {
   margin: 0 auto;
   padding: 2em 0;
   background-color: var(--white-color);
+  margin-top: 7em;
 }
 
 .resto__label {
@@ -247,6 +253,10 @@ main {
   color: var(--text-color);
 }
 
+.resto__container__drinks {
+  padding: 2em 0;
+}
+
 /* 
 	Figure
  */
@@ -276,7 +286,7 @@ figure p {
 */
 
 footer {
-  margin-top: 2em;
+  margin-top: 10em;
   padding: 2em 0;
   border-top: 1px solid #d9d9d9;
   color: var(--text-color);
@@ -324,4 +334,67 @@ footer {
 .social-icon-github:hover {
   background-color: var(--github-color);
   color: white;
+}
+
+ #review {
+  overflow-x:scroll;
+  overflow-y:hidden;
+  
+  /* Styling */
+  /* background-color: var(--background-color); */
+  padding: 2em 0 0em 0;
+  width: 70vw;
+  /* margin-bottom: 5em; */
+}
+
+#comentar {
+  width: auto;
+  white-space:nowrap; 
+
+}
+
+.reviewer {
+  display: inline-block;
+  
+  /* Styling */
+  text-align: center;
+  /* background-color: white; */
+  border: 2px solid #f7f9fc;
+  width: 25em;
+  /* min-height: 18em; */
+  margin: 1em .5em;
+  border-radius: .3em;
+  padding-bottom: 1em;
+}
+
+.reviewer img {
+  width: 4em;
+  height: 4.4em;
+  border-radius: 2.5em;
+  margin-top: -2.5em;
+  margin-bottom: .5em;
+}
+
+.reviewer__name {
+  font-weight: bolder;
+  font-size: large;
+}
+
+.reviewer__date {
+  font-size: normal;
+  padding: 1em 0;
+}
+
+.reviewer__comentar textarea {
+  border-radius: 0.5em;
+  border: none;
+  resize: none;
+  font-weight: normal;
+  font-size: large;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  background-color: #f7f9fc;
+  color: #94a0B9;
+  padding: .5em;
+  width: 90%;
 }
