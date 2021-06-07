@@ -4,10 +4,39 @@
     margin: 0 auto;
   }
 
+	.hero {
+		margin-top: 3.8rem;
+		height: 40vh;
+	}
+
+	.hero__title {
+		font-size: x-large;
+	}
+
+	.hero__subtitle {
+		font-size: large;
+	}
+
+	.hero__description {
+		font-size: small;
+		width: 90vw;
+	}
+
   .resto__list {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
   }
+
+	.resto__list__menu {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.resto__menu__food img,
+	.resto__menu__drink img {
+		height: 150px;
+		object-fit: cover;
+	}
 }
 @media screen and (min-width: 651px) {
 	.app-bar {
@@ -39,33 +68,50 @@
 		margin: 0;
 	}
 
-	.movies {
-		grid-template-columns: 1fr 1fr;
+	.hero {
+		margin-top: 3.8rem;
+		height: 40vh;
 	}
 
-	.movie {
-		grid-template-columns: auto 1fr;
+	.hero__title {
+		font-size: xx-large;
 	}
 
-	.movie .movie__title {
-		grid-column-start: 1;
-		grid-column-end: 3;
+	.hero__subtitle {
+		font-size: x-large;
 	}
 
-	.movie .movie__overview {
-		grid-column-start: 1;
-		grid-column-end: 3;
+	.hero__description {
+		font-size: small;
 	}
 
   .resto__list {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
   }
+
+	.resto__list__menu {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+	}
 }
 
 @media screen and (min-width: 800px) {
 	.app-bar .app-bar__brand h1 {
 		font-size: 2em;
+	}
+
+ 	
+	.hero__title {
+		font-size: xx-large;
+	}
+
+	.hero__subtitle {
+		font-size: x-large;
+	}
+
+	.hero__description {
+		font-size: large;
 	}
 
 	.resto__list {
@@ -75,31 +121,38 @@
 }
 
 @media screen and (min-width: 850px) {
-	.movies {
-		grid-template-columns: repeat(3, 1fr);
+	.resto__list__menu {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
 	}
 
-	
 }
 
 @media screen and (min-width: 1200px) {
-	.movies {
-		grid-template-columns: repeat(4, 1fr);
+.hero {
+		margin-top: 3.8rem;
+		height: 50vh;
 	}
 
 	.resto__list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
   }
+
+	.resto__list__menu {
+		display: grid;
+		grid-template-columns: repeat(5, 1fr);
+	}
 }
 
 @media screen and (min-width: 1600px) {
-	.movies {
-		grid-template-columns: repeat(5, 1fr);
-	}
-
 	.resto__list {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
   }
+
+	.resto__list__menu {
+		display: grid;
+		grid-template-columns: repeat(6, 1fr);
+	}
 }
