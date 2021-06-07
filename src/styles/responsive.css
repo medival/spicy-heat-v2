@@ -1,6 +1,6 @@
 @media screen and (max-width: 650px) {
 	.resto__container {
-    width: 100%;
+    width: 90%;
     margin: 0 auto;
   }
 
@@ -32,13 +32,16 @@
 		grid-template-columns: repeat(2, 1fr);
 	}
 
-	.resto__menu__food img,
-	.resto__menu__drink img {
-		height: 150px;
-		object-fit: cover;
+	figure.resto__menu__food {
+		min-width: 180px;
 	}
 }
 @media screen and (min-width: 651px) {
+	.resto__container {
+    width: 90%;
+    margin: 0 auto;
+  }
+
 	.app-bar {
 		grid-template-columns: 1fr auto;
 		padding: 8px 32px;
@@ -92,11 +95,17 @@
 
 	.resto__list__menu {
 		display: grid;
-		grid-template-columns: repeat(2, 1fr);
+		grid-template-columns: repeat(3, 1fr);
 	}
+
 }
 
 @media screen and (min-width: 800px) {
+	.resto__container {
+    width: 90%;
+    margin: 0 auto;
+  }
+
 	.app-bar .app-bar__brand h1 {
 		font-size: 2em;
 	}
@@ -118,6 +127,19 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
+
+.resto__container {
+    margin: 0 auto;
+  }
+
+	.resto__list__menu {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+	}
+
+	figure.resto__menu__food {
+		min-width: 180px;
+	}
 }
 
 @media screen and (min-width: 850px) {
@@ -129,7 +151,12 @@
 }
 
 @media screen and (min-width: 1200px) {
-.hero {
+	.resto__container {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+	.hero {
 		margin-top: 3.8rem;
 		height: 50vh;
 	}
@@ -142,10 +169,18 @@
 	.resto__list__menu {
 		display: grid;
 		grid-template-columns: repeat(5, 1fr);
+		display: inline-block;
+		overflow-x: scroll;
+		/* width: 40vw; */
 	}
 }
 
 @media screen and (min-width: 1600px) {
+	.resto__container {
+    width: 70%;
+    margin: 0 auto;
+  }
+
 	.resto__list {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -153,6 +188,10 @@
 
 	.resto__list__menu {
 		display: grid;
-		grid-template-columns: repeat(6, 1fr);
+		grid-template-columns: repeat(auto, 1fr);
+	}
+
+	figure.resto__menu__food {
+		min-width: 200px;
 	}
 }
