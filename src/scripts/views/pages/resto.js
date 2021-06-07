@@ -1,3 +1,6 @@
+import RestoDBSource from '../../data/resto-source';
+import { createRestoItemTemplate } from '../templates/template-creator';
+
 const Resto = {
   async render() {
     return `
@@ -7,16 +10,22 @@ const Resto = {
       <a href="#main" class="hero__cta"> DISCOVER </a>
      </section>
 
-     <section class="resto" id="main">
+     <section class="resto">
       <div class="resto__container">
         <h2 class="resto__label"> Explore Restaurant & Explore Food </h2>
+        <div id="foods" class="foods resto__list">
+      </div>
       </div>
      </section>
     `;
   },
  
   async afterRender() {
-    // Fungsi ini akan dipanggil setelah render()
+    const foods = await RestoDBSource.restoFoods();
+    const foodsContainer = document.querySelector('#foods');
+    foods.forEach((food) => {
+      foodsContainer.innerHTML += createRestoItemTemplate(food);
+    });
   },
 };
  
