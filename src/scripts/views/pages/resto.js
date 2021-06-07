@@ -13,18 +13,18 @@ const Resto = {
      <section class="resto">
       <div class="resto__container">
         <h2 class="resto__label"> Explore Restaurant & Explore Food </h2>
-        <div id="foods" class="foods resto__list">
-      </div>
+        <div id="resto" class="resto__list">
+        </div>
       </div>
      </section>
     `;
   },
  
   async afterRender() {
-    const foods = await RestoDBSource.restoFoods();
-    const foodsContainer = document.querySelector('#foods');
-    foods.forEach((food) => {
-      foodsContainer.innerHTML += createRestoItemTemplate(food);
+    const restaurant = await RestoDBSource.infoResto();
+    const restaurantContainer = document.querySelector('#resto');
+    restaurant.forEach((resto) => {
+      restaurantContainer.innerHTML += createRestoItemTemplate(resto);
     });
   },
 };
