@@ -138,7 +138,7 @@ main {
   justify-content: center;
   flex-direction: column;
 	left: 0;
-	/* z-index: 2; */
+  text-align: center;
 }
 
 .hero__image {
@@ -154,7 +154,6 @@ main {
   margin: 0 auto;
 	font-size: 50px;
   text-shadow: 2px 2px var(--background-color);
-  text-align: center;
   letter-spacing: .1em;
 	z-index: 1;
 }
@@ -164,19 +163,20 @@ main {
   margin: 0 auto;
 	font-size: xx-large;
   text-shadow: 2px 2px var(--background-color);
-  text-align: center;
   letter-spacing: .1em;
 	width: 80vw;
 	z-index: 1;
+  margin-top: 1em;
 }
 
 .hero__description {
   color: var(--white-color);
   margin: 0 auto;
 	font-size: large;
-  text-align: center;
-	width: 80vw;
+	width: 60vw;
 	z-index: 1;
+  margin-top: .5em;
+  line-height: 1.6em;
 }
 
 .hero__cta {
