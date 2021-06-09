@@ -32,16 +32,16 @@ const createRestoDetailTemplate = (resto) => `
   </section>
 `;
 
-const createAvailableFoodsMenu = (food) => `
+const createAvailableFoodsMenu = (food, foodsImages) => `
 		<figure class="resto__menu__food">
-			<img src="https://image.freepik.com/free-vector/salmon-sushi-with-chopstick-plate-cartoon-icon-illustration-japanese-food-icon-concept-isolated-flat-cartoon-style_138676-1727.jpg" alt="Food-name">
+			<img src="${foodsImages}" alt="${food.name}">
 			<h4 class="resto__about"> ${food.name} </h4>
 		</figure>
 `;
 
-const createAvailableDrinksMenu = (drink) => `
+const createAvailableDrinksMenu = (drink, drinkImages) => `
 		<figure class="resto__menu__food">
-			<img src="https://image.freepik.com/free-vector/salmon-sushi-with-chopstick-plate-cartoon-icon-illustration-japanese-food-icon-concept-isolated-flat-cartoon-style_138676-1727.jpg" alt="Food-name">
+			<img src="${drinkImages}" alt="${drink.name}">
 			<h4 class="resto__about"> ${drink.name} </h4>
 		</figure>
 `;
