@@ -1,5 +1,7 @@
 import UrlParser from '../../routes/url-parser';
 import RestoDBSource from '../../data/resto-source';
+import EXTRA from '../../DATA';
+
 import {
   createHeroTemplate,
   createRestoItemTemplate,
@@ -37,25 +39,23 @@ const Detail = {
   async afterRender() {
     const url = UrlParser.parseActiveUrlWithoutCombiner();
     const detailResto = await RestoDBSource.detailResto(url.id);
-
+    
     console.log(detailResto.restaurant.menus.foods);
     const restoContainer = document.querySelector('#resto');
     restoContainer.innerHTML += createHeroTemplate(detailResto);
     
     const foodsMenuContainer = document.querySelector('#foodsMenu');
-    detailResto.restaurant.menus.foods.forEach((food) => {
-      foodsMenuContainer.innerHTML += createAvailableFoodsMenu(food);
+    detailResto.restaurant.menus.foods.forEach((food, index=0) => {
+      foodsMenuContainer.innerHTML += createAvailableFoodsMenu(food, EXTRA.resto[index].food);
     });
     
     const drinksMenuContainer = document.querySelector('#drinksMenu');
-    detailResto.restaurant.menus.drinks.forEach((drink) => {
-      console.log(drink);
-      drinksMenuContainer.innerHTML += createAvailableDrinksMenu(drink);
+    detailResto.restaurant.menus.drinks.forEach((drink, index=0) => {
+      drinksMenuContainer.innerHTML += createAvailableDrinksMenu(drink, EXTRA.resto[index].drink);
     })
     
     const reviewerContainer = document.querySelector("#review");
     detailResto.restaurant.customerReviews.forEach((review) => {
-      console.log(review);
       reviewerContainer.innerHTML += createCustomerReview(review);
     });
   },
