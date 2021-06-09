@@ -6,7 +6,7 @@ const Resto = {
     return `
      <section class="hero">
       <h1 class="hero__title"> Welcome <br> to Spicy Heat </h1>
-        <img class="hero__image" src="images/heros/hero-image_2.jpg" alt="Hero Image">
+        <img class="hero__image" src="assets/images/heros/hero-image_2.jpg" alt="Hero Image">
       <a href="#main" class="hero__cta"> DISCOVER </a>
      </section>
 
