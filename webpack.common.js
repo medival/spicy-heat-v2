@@ -45,7 +45,7 @@ module.exports = {
       ],
     }),
     new FaviconsWebpackPlugin({
-        logo: path.resolve(__dirname, 'src/public/images/logo/favicon.png'),
+        logo: path.resolve(__dirname, 'src/public/assets/images/logo/favicon.png'),
     })
   ],
 };
