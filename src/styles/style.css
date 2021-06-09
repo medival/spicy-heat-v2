@@ -348,20 +348,19 @@ footer {
   white-space:nowrap; 
 
 }
-
 .reviewer {
   display: inline-block;
   text-align: center;
   border: 2px solid #f7f9fc;
-  width: 25em;
+  width: 23em;
   margin: 1em .5em;
   border-radius: .3em;
   padding-bottom: 1em;
 }
 
 .reviewer img {
-  width: 4em;
-  height: 4.4em;
+  width: 3em;
+  height: 3.2em;
   border-radius: 2.5em;
   margin-top: -2.5em;
   margin-bottom: .5em;
@@ -382,7 +381,7 @@ footer {
   border: none;
   resize: none;
   font-weight: normal;
-  font-size: large;
+  font-size: normal;
   font-family: 'Poppins', sans-serif;
   text-align: center;
   background-color: #f7f9fc;
