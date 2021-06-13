@@ -1,5 +1,3 @@
-/* eslint-disable no-underscore-dangle */
-
 import DrawerInitiator from '../utils/drawer-initiator';
 import UrlParser from '../routes/url-parser';
 import routes from '../routes/routes';
@@ -13,7 +11,6 @@ class App {
     this._initialAppShell();
   }
 
-  // eslint-disable-next-line class-methods-use-this
   _initialAppShell() {
     DrawerInitiator.init({
       button: this._button,
@@ -21,7 +18,6 @@ class App {
       content: this._content,
     });
 
-    // other component
   }
   
   async renderPage() {

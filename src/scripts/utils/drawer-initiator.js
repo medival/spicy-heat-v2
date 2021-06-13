@@ -1,6 +1,3 @@
-/* eslint-disable no-trailing-spaces */
-/* eslint-disable no-tabs */
-/* eslint-disable no-underscore-dangle */
 const DrawerInitiator = {
   init({ button, drawer, content }) {
     button.addEventListener('click', (event) => {
@@ -16,7 +13,7 @@ const DrawerInitiator = {
     event.stopPropagation();
     drawer.classList.toggle('open');
   },
-	
+  
   _closeDrawer(event, drawer) {
     event.stopPropagation();
     drawer.classList.remove('open');
