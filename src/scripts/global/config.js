@@ -6,7 +6,6 @@ const CONFIG = {
 	DATABASE_NAME: 'spicy-heat-database',
 	DATABASE_VERSION: 1,
 	OBJECT_STORE_NAME: 'resto',
-	WEB_SOCKET_SERVER: 'wss://restaurant-feed.dicoding.dev'
 };
 
 export default CONFIG;
