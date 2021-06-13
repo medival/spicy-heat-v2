@@ -5,7 +5,8 @@ const CONFIG = {
 	CACHE_NAME: new Date().toISOString(),
 	DATABASE_NAME: 'spicy-heat-database',
 	DATABASE_VERSION: 1,
-	OBJECT_STORE_NAME: 'resto'
+	OBJECT_STORE_NAME: 'resto',
+	WEB_SOCKET_SERVER: 'wss://restaurant-feed.dicoding.dev'
 };
 
 export default CONFIG;
