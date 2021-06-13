@@ -67,12 +67,27 @@ const createRestoItemTemplate = (resto) => `
 	<a href="#/detail/${resto.id}" class="resto__selector">
 		<figure>
 				<img src="${CONFIG.BASE_IMAGE_URL + resto.pictureId}" alt="${resto.name}">
-				<h4 class="resto__info"> ${resto.city} • ⭐️ ${resto.rating} </h4>
-				<h4 class="resto__about"> About </h4>
-				<h3 class="resto__title" href="#/detail/${resto.id}"> ${resto.name} </h3>
+				<div class="resto__info_container">
+					<h4 class="resto__info"> ${resto.rating} </h4>
+				</div>
+				<h3 class="resto__title" href="#/detail/${resto.id}"> ${resto.name} at ${resto.city} </h3>
 				<p class="resto__description"> ${resto.description.substring(0, 150)} </p>
 		</figure>
 	</a>
+`;
+
+const createCategoriesRestoTemplate = (category) => `
+<div class="resto__category">
+    <div class="resto__categroy_icon">
+         <i class="fa fa-large fa-check category__icon_check"></i>
+    </div>
+    <div class="resto__category_image">
+        <img src="#" alt="" srcset="">
+    </div>
+    <div class="resto__category_name">
+        ${category.name}
+    </div>
+</div>
 `;
 
 const createLikeButtonTemplate = () => `
@@ -89,6 +104,7 @@ const createLikedButtonTemplate = () => `
 
 export {
 	createHeroTemplate,
+	createCategoriesRestoTemplate,
 	createRestoItemTemplate,
 	createRestoDetailTemplate,
 	createAvailableFoodsMenu,
