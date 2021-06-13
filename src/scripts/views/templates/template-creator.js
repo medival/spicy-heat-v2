@@ -81,6 +81,12 @@ const createLikeButtonTemplate = () => `
 	</button>
 `;
 
+const createLikedButtonTemplate = () => `
+	<button aria-label="unlike this resto" id="likeButton" class="like">
+		<i class="fa fa-heart" aria-hidden="true"></i>
+	</button>
+`;
+
 export {
 	createHeroTemplate,
 	createRestoItemTemplate,
@@ -88,5 +94,6 @@ export {
 	createAvailableFoodsMenu,
 	createAvailableDrinksMenu,
 	createCustomerReview,
-	createLikeButtonTemplate
+	createLikeButtonTemplate,
+	createLikedButtonTemplate
 };
