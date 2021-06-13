@@ -12,7 +12,8 @@ const Resto = {
 
      <section class="resto">
       <div class="resto__container">
-        <h2 class="resto__label"> Explore Restaurant & Explore Food </h2>
+        <h1 class="resto__label" id="main"> Explore Restaurant & Explore Food </h1>
+        <p class="resto__subtitle"> Here are a few of our favourites: </p>
         <div id="resto" class="resto__list">
         </div>
       </div>
