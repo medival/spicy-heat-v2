@@ -7,8 +7,11 @@ import {
   createRestoItemTemplate,
   createAvailableFoodsMenu,
   createAvailableDrinksMenu,
-  createCustomerReview
+  createCustomerReview,
+  createLikeButtonTemplate,
+  createLikedButtonTemplate,
 } from '../templates/template-creator';
+import LikeButtonInitiator from '../../utils/like-button-initiator';
 
 const Detail = {
   async render() {
@@ -33,31 +36,46 @@ const Detail = {
           </div>
         </div>
       </section>
+      <div id="likeButtonContainer"></div>
     `;
   },
  
   async afterRender() {
     const url = UrlParser.parseActiveUrlWithoutCombiner();
     const detailResto = await RestoDBSource.detailResto(url.id);
+    const results = detailResto.restaurant;
     
-    console.log(detailResto.restaurant.menus.foods);
     const restoContainer = document.querySelector('#resto');
     restoContainer.innerHTML += createHeroTemplate(detailResto);
     
     const foodsMenuContainer = document.querySelector('#foodsMenu');
-    detailResto.restaurant.menus.foods.forEach((food, index=0) => {
+    results.menus.foods.forEach((food, index=0) => {
       foodsMenuContainer.innerHTML += createAvailableFoodsMenu(food, EXTRA.resto[index].food);
     });
     
     const drinksMenuContainer = document.querySelector('#drinksMenu');
-    detailResto.restaurant.menus.drinks.forEach((drink, index=0) => {
+    results.menus.drinks.forEach((drink, index=0) => {
       drinksMenuContainer.innerHTML += createAvailableDrinksMenu(drink, EXTRA.resto[index].drink);
     })
     
     const reviewerContainer = document.querySelector("#review");
-    detailResto.restaurant.customerReviews.forEach((review) => {
+    results.customerReviews.forEach((review) => {
       reviewerContainer.innerHTML += createCustomerReview(review);
     });
+    
+    LikeButtonInitiator.init({
+      likeButtonContainer: document.querySelector('#likeButtonContainer'),
+      resto: {
+        id: results.id,
+        name: results.name,
+        rating: results.rating,
+        address: results.address,
+        pictureId: results.pictureId,
+        description: results.description,
+      },
+    },
+    console.log(results)
+    )
   },
 };
  
