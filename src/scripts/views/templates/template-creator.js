@@ -75,11 +75,18 @@ const createRestoItemTemplate = (resto) => `
 	</a>
 `;
 
+const createLikeButtonTemplate = () => `
+	<button aria-label="like this resto" id="likeButton" class="like">
+		<i class="fa fa-heart-o" aria-hidden="true"></i>
+	</button>
+`;
+
 export {
 	createHeroTemplate,
 	createRestoItemTemplate,
 	createRestoDetailTemplate,
 	createAvailableFoodsMenu,
 	createAvailableDrinksMenu,
-	createCustomerReview
+	createCustomerReview,
+	createLikeButtonTemplate
 };
