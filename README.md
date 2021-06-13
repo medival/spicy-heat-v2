@@ -42,4 +42,4 @@ Fitur yang harus ada pada aplikasi:
 - Chill Icon   <a href='https://pngtree.com/so/hand-painted'> pngtree </a>
 - Font Awesome
 - Google Font
-- Image from <a hef='https://unsplash.com'> Unsplash </a>
+- Image from <a href='https://unsplash.com'> Unsplash </a>
