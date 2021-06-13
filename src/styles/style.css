@@ -49,7 +49,7 @@ body {
 	background-color: transparent;
 	border: none;
 	font-size: 28px;
-	padding: 8px;
+	padding: 10px;
 	cursor: pointer;
 }
 
@@ -67,7 +67,7 @@ body {
 
 .app-bar .app-bar__navigation {
 	position: absolute;
-	top: 50px;
+	top: 60px;
 	left: -180px;
 	width: 150px;
 	transition: all 0.3s;
@@ -77,7 +77,7 @@ body {
 }
 
 .app-bar .app-bar__navigation.open {
-	left: 0;
+	left: -10px;
 }
 
 .app-bar .app-bar__navigation ul li a {
@@ -93,6 +93,10 @@ body {
 
 .app-bar__navigation ul li a:hover {
 	color: var(--primary-color);
+}
+
+.app-bar__navigation ul li {
+  margin: 0 5px;
 }
 
 #app-bar__link-active {
@@ -301,7 +305,8 @@ main {
   /* width: 250px; */
   border-radius:10px;
   margin: 0 1em;
-  border: 2px solid  var(--background-color);;
+  box-shadow: 5px 5px 11px  rgba(249, 249, 249, 1),
+    -5px -5px 11px  rgba(249, 249, 249, 1);
   text-align: center; 
   /* justify-content: center; */
     /* align-content: center; */
@@ -348,9 +353,11 @@ main {
   grid-template-columns: repeat(auto-fit, minmax(200px, 250px));
   justify-content: center;
   grid-gap: 3em;
-  border: 2px solid rgba(208, 208, 208, 0.40);
+  border: 2px solid transparent;
   border-radius: 1em;
   margin: .5em;
+  box-shadow: 5px 5px 11px  rgba(249, 249, 249, 1),
+    -5px -5px 11px  rgba(249, 249, 249, 1);
 }
 
 .resto__foodies:hover {
@@ -408,9 +415,11 @@ main {
   grid-template-columns: repeat(auto-fit, minmax(200px, 250px));
   justify-content: center;
   grid-gap: 3em;
-  border: 2px solid rgba(208, 208, 208, 0.40);
+  border: 2px solid transparent;
   border-radius: 1em;
   margin: .5em;
+  box-shadow: 5px 5px 11px  rgba(249, 249, 249, 1),
+    -5px -5px 11px  rgba(249, 249, 249, 1);
 }
 
 .resto__drinkies:hover {
