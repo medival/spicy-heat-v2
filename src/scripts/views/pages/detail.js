@@ -5,6 +5,7 @@ import EXTRA from '../../DATA';
 import {
   createHeroTemplate,
   createRestoItemTemplate,
+  createCategoriesRestoTemplate,
   createAvailableFoodsMenu,
   createAvailableDrinksMenu,
   createCustomerReview,
@@ -16,8 +17,14 @@ import LikeButtonInitiator from '../../utils/like-button-initiator';
 const Detail = {
   async render() {
      return `
-      <div id="resto"> </div>
+      <section id="resto"> </section>
+      <section id="categories"> </section>
       <section class="resto">
+        <div class="resto__container">
+          <h2 class="resto__label"> Restaurant Categories </h2>
+          <div class="resto__categories" id="restoCategories">
+          </div>
+        </div>
         <div class="resto__container">
           <h2 class="resto__label"> Available Foods Menu </h2>
             <div class="resto__list__menu" id="foodsMenu">
@@ -48,6 +55,11 @@ const Detail = {
     const restoContainer = document.querySelector('#resto');
     restoContainer.innerHTML += createHeroTemplate(detailResto);
     
+    const categoriesContaier = document.querySelector('#restoCategories');
+    results.categories.forEach((category) => {
+      categoriesContaier.innerHTML += createCategoriesRestoTemplate(category);
+    })
+    
     const foodsMenuContainer = document.querySelector('#foodsMenu');
     results.menus.foods.forEach((food, index=0) => {
       foodsMenuContainer.innerHTML += createAvailableFoodsMenu(food, EXTRA.resto[index].food);
@@ -68,6 +80,7 @@ const Detail = {
       resto: {
         id: results.id,
         name: results.name,
+        city: results.city,
         rating: results.rating,
         address: results.address,
         pictureId: results.pictureId,
