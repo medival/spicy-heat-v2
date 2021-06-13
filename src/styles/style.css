@@ -133,15 +133,15 @@ main {
   text-decoration: none;
   width: 10em;
   top: 0;
-  z-index: -8;
-  /* position: absolute; */
+  z-index: 5;
+  position: absolute;
 }
 
 .skip-to-content:focus {
-  position: relative;
+  position: absolute;
   transform: translateY(0);
-  top: 5em;
-  z-index: 10;
+  top: 6em;
+  z-index: 5;
 }
 
 /* 
@@ -224,7 +224,6 @@ main {
   margin: 0 auto;
   padding: 2em 0;
   background-color: var(--white-color);
-  margin-top: 7em;
 }
 
 .resto__label {
@@ -241,6 +240,7 @@ main {
 .resto__container {
   width: 90vw;
   margin: 0 auto;
+  padding-top: 8em;
 }
 
 .resto__container:first-child {
@@ -257,7 +257,7 @@ main {
 	background-color: gold;
 	width: 1.2em;
   height: 1.2em;
-  /* border-radius: 1em; */
+  border-radius: 1em;
   text-align: center;
   padding: .4em;
 }
