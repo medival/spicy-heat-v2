@@ -33,17 +33,29 @@ const createRestoDetailTemplate = (resto) => `
 `;
 
 const createAvailableFoodsMenu = (food, foodsImages) => `
-		<figure class="resto__menu__food">
-			<img src="${foodsImages}" alt="${food.name}">
-			<h4 class="resto__about"> ${food.name} </h4>
-		</figure>
+		<div class="resto__foodies">
+			<div class="resto__food_icon">
+			</div>
+			<div class="resto__food_image">
+				<img src="${foodsImages}" alt="${food.name}" srcset="">
+			</div>
+			<div class="resto__food_name">
+				${food.name}
+			</div>
+		</div>
 `;
 
 const createAvailableDrinksMenu = (drink, drinkImages) => `
-		<figure class="resto__menu__food">
-			<img src="${drinkImages}" alt="${drink.name}">
-			<h4 class="resto__about"> ${drink.name} </h4>
-		</figure>
+		<div class="resto__drinkies">
+			<div class="resto__drink_icon">
+			</div>
+			<div class="resto__drink_image">
+				<img src="${drinkImages}" alt="${drink.name}" srcset="">
+			</div>
+			<div class="resto__drink_name">
+				${drink.name}
+			</div>
+		</div>
 `;
 
 const createCustomerReview = (review) => `
