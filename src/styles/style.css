@@ -110,7 +110,7 @@ body {
 */
 
 main {
-	/* padding: 32px; */
+  top: -1em;
 	flex: 1;
 }
 
@@ -123,10 +123,26 @@ main {
 	font-weight: normal;
 }
 
+.skip-to-content {
+  padding: 10px 16px;
+  border-radius: 4px;
+  color: var(--white-color);
+  background-color: var(--primary-color);
+  font-weight: 700;
+  transition: 350ms;
+  text-decoration: none;
+  width: 10em;
+  top: 0;
+  z-index: -8;
+  /* position: absolute; */
+}
 
-
-
-
+.skip-to-content:focus {
+  position: relative;
+  transform: translateY(0);
+  top: 5em;
+  z-index: 10;
+}
 
 /* 
 	Hero
@@ -213,6 +229,12 @@ main {
 
 .resto__label {
   text-align: center;
+  margin-bottom: 1em;
+  font-size: xx-large;
+}
+
+.resto__subtitle {
+  text-align: center;
   margin-bottom: 1.5em;
 }
 
@@ -221,18 +243,25 @@ main {
   margin: 0 auto;
 }
 
-.resto__info {
+.resto__container:first-child {
+  margin-bottom: 6em;
+}
+
+.resto__info_container {
   position: relative;
-  top: -4em;
+  top: -3em;
+  left: .5em;
   z-index: 1;
-  background-color: transparent;
-  padding: .5em 0 .5em 1.5em;
   color: var(--white-color);
   font-size: large;
-  text-shadow: 1px 1px var(--text-color);
-	background-color: var(--background-color);
-	width: 180px;
+	background-color: gold;
+	width: 1.2em;
+  height: 1.2em;
+  /* border-radius: 1em; */
+  text-align: center;
+  padding: .4em;
 }
+
 
 .resto__selector {
 	text-decoration: none;
@@ -256,6 +285,62 @@ main {
 .resto__container__drinks {
   padding: 2em 0;
 }
+
+/* 
+  Category
+*/
+
+.resto__categories {
+  display: grid; 
+  grid-template-columns: repeat(auto-fit, minmax(80px, 300px));
+  justify-content: center;
+}
+
+.resto__category {
+  height: 200px;
+  /* width: 250px; */
+  border-radius:10px;
+  margin: 0 1em;
+  border: 2px solid  var(--background-color);;
+  text-align: center; 
+  /* justify-content: center; */
+    /* align-content: center; */
+
+}
+
+.resto__categroy_icon {
+  color: whitesmoke;
+  background-color: #5B77F0;
+  width: 1.5em;
+  height: 1.5em;
+  margin: 0 auto;
+  justify-content: center;
+  border-radius: 1em;
+  top: -1em;
+  position: relative;
+  margin-bottom: 1em;
+}
+
+.category__icon_check {
+  margin-top: .2em;
+}
+
+.resto__category_image {
+  width: 5em;
+  height: 5em;
+  background-color: #5B77F0;
+  margin: 0 auto;
+  border-radius: 2.5em;
+}
+
+.resto__category_name {
+  font-size: large;
+  color: #5E607C;
+  font-weight: bold;
+  position: relative;
+  bottom: -30px;
+}
+
 
 /* 
 	Figure
