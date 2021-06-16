@@ -13,6 +13,6 @@
     },
     "rules": {
         "no-underscore-dangle": "off",
-        "console-log": "disable"
+        "console-log": "off"
     }
 }
