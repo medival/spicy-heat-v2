@@ -20,7 +20,7 @@ const Resto = {
      </section>
     `;
   },
- 
+
   async afterRender() {
     const restaurant = await RestoDBSource.infoResto();
     const restaurantContainer = document.querySelector('#resto');
@@ -29,5 +29,5 @@ const Resto = {
     });
   },
 };
- 
+
 export default Resto;

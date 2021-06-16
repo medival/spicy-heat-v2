@@ -4,19 +4,16 @@ import EXTRA from '../../DATA';
 
 import {
   createHeroTemplate,
-  createRestoItemTemplate,
   createCategoriesRestoTemplate,
   createAvailableFoodsMenu,
   createAvailableDrinksMenu,
   createCustomerReview,
-  createLikeButtonTemplate,
-  createLikedButtonTemplate,
 } from '../templates/template-creator';
 import LikeButtonInitiator from '../../utils/like-button-initiator';
 
 const Detail = {
   async render() {
-     return `
+    return `
       <section id="resto"> </section>
       <section id="categories"> </section>
       <section class="resto">
@@ -46,35 +43,35 @@ const Detail = {
       <div id="likeButtonContainer"></div>
     `;
   },
- 
+
   async afterRender() {
     const url = UrlParser.parseActiveUrlWithoutCombiner();
     const detailResto = await RestoDBSource.detailResto(url.id);
     const results = detailResto.restaurant;
-    
+
     const restoContainer = document.querySelector('#resto');
     restoContainer.innerHTML += createHeroTemplate(detailResto);
-    
+
     const categoriesContaier = document.querySelector('#restoCategories');
     results.categories.forEach((category) => {
       categoriesContaier.innerHTML += createCategoriesRestoTemplate(category);
-    })
-    
+    });
+
     const foodsMenuContainer = document.querySelector('#foodsMenu');
-    results.menus.foods.forEach((food, index=0) => {
+    results.menus.foods.forEach((food, index = 0) => {
       foodsMenuContainer.innerHTML += createAvailableFoodsMenu(food, EXTRA.resto[index].food);
     });
-    
+
     const drinksMenuContainer = document.querySelector('#drinksMenu');
-    results.menus.drinks.forEach((drink, index=0) => {
+    results.menus.drinks.forEach((drink, index = 0) => {
       drinksMenuContainer.innerHTML += createAvailableDrinksMenu(drink, EXTRA.resto[index].drink);
-    })
-    
-    const reviewerContainer = document.querySelector("#review");
+    });
+
+    const reviewerContainer = document.querySelector('#review');
     results.customerReviews.forEach((review) => {
       reviewerContainer.innerHTML += createCustomerReview(review);
     });
-    
+
     LikeButtonInitiator.init({
       likeButtonContainer: document.querySelector('#likeButtonContainer'),
       resto: {
@@ -87,9 +84,8 @@ const Detail = {
         description: results.description,
       },
     },
-    console.log(results)
-    )
+    console.log(results));
   },
 };
- 
+
 export default Detail;

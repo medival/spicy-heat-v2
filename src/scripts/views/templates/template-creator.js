@@ -9,29 +9,6 @@ const createHeroTemplate = (resto) => `
 	</section>
 `;
 
-const createRestoDetailTemplate = (resto) => `
-	<section class="resto">
-		<div class="resto__container">
-		  <h2 class="resto__label"> Available Foods Menu </h2>
-		  <div class="resto__list__menu">
-				<figure class="resto__menu__food">
-					<img src="https://image.freepik.com/free-vector/salmon-sushi-with-chopstick-plate-cartoon-icon-illustration-japanese-food-icon-concept-isolated-flat-cartoon-style_138676-1727.jpg" alt="Food-name">
-					<h4 class="resto__info"> Food Name </h4>
-					<h4 class="resto__about"> About </h4>
-		    </figure>
-		  </div>
-		  <h2 class="resto__label"> Available Drinks Menu </h2>
-		  <div class="resto__list__menu">
-				<figure class="resto__menu__food">
-					<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIMwcy4W3trzW4F4JrI2oT_skwzDmYugHzEg&usqp=CAU" alt="Food-name">
-					<h4 class="resto__info"> Food Name </h4>
-					<h4 class="resto__about"> About </h4>
-				</figure>
-		  </div>
-		</div>
-  </section>
-`;
-
 const createAvailableFoodsMenu = (food, foodsImages) => `
 		<div class="resto__foodies">
 			<div class="resto__food_icon">
@@ -115,13 +92,12 @@ const createLikedButtonTemplate = () => `
 `;
 
 export {
-	createHeroTemplate,
-	createCategoriesRestoTemplate,
-	createRestoItemTemplate,
-	createRestoDetailTemplate,
-	createAvailableFoodsMenu,
-	createAvailableDrinksMenu,
-	createCustomerReview,
-	createLikeButtonTemplate,
-	createLikedButtonTemplate
+  createHeroTemplate,
+  createCategoriesRestoTemplate,
+  createRestoItemTemplate,
+  createAvailableFoodsMenu,
+  createAvailableDrinksMenu,
+  createCustomerReview,
+  createLikeButtonTemplate,
+  createLikedButtonTemplate,
 };
