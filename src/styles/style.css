@@ -84,11 +84,12 @@ body {
 	display: inline-block;
 	text-decoration: none;
 	color: var(--dark-color);
-	padding: 12px;
+	padding: 15px 5px;
 	margin-bottom: 5px;
 	width: 100%;
 	background-color: #f2f2f2;
 	border-radius: 5px;
+  font-size: large;
 }
 
 .app-bar__navigation ul li a:hover {
@@ -517,11 +518,14 @@ footer {
 }
 
 .footer__social-media-icons a {
-  padding: 0.5em;
-  margin: 1.5em 0.5em 0 0;
+  padding: 1em;
   width: 4em;
   border-radius:	 0.3em;
   text-decoration: none;
+}
+
+.footer__social-media-icons a i {
+  font-size: x-large;
 }
 
 .social-icon-twitter {
@@ -530,6 +534,7 @@ footer {
 
 .social-icon-linkedin {
   color: var(--linkedin-color);
+  margin: 0 1.5em;
 }
 
 .social-icon-github {

@@ -94,7 +94,7 @@
 
   .resto__list {
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 
 	.resto__list__menu {
@@ -117,7 +117,6 @@
 		font-size: 2em;
 	}
 
- 	
 	.hero__title {
 		font-size: xx-large;
 	}
@@ -135,7 +134,7 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
-.resto__container {
+	.resto__container {
     margin: 0 auto;
   }
 
@@ -154,7 +153,6 @@
 		display: grid;
 		grid-template-columns: repeat(4, 1fr);
 	}
-
 }
 
 @media screen and (min-width: 1200px) {
@@ -178,17 +176,16 @@
 		grid-template-columns: repeat(5, 1fr);
 	}
 
-		#review {
+	#review {
   	width: 78vw;
 	}
 }
 
 @media screen and (min-width: 1600px) {
 	.resto__container {
-    width: 70%;
+    width: 80%;
     margin: 0 auto;
   }
-
 	.resto__list {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
