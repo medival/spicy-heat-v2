@@ -13,6 +13,9 @@
     },
     "rules": {
         "no-underscore-dangle": "off",
-        "console-log": "off"
+        "console-log": 0,
+        "import/extensions": "off",
+        "no-tabs": "off",
+        "no-restricted-globals": "off"
     }
 }
