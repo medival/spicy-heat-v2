@@ -3,9 +3,7 @@ import CONFIG from '../../global/config';
 const createHeroTemplate = (resto) => `
 	<section class="hero">
 	 <h1 class="hero__title"> ${resto.restaurant.name} </h1>
-	 <h4 class="hero__subtitle"> ${resto.restaurant.city} • ⭐️ ${resto.restaurant.rating} • ${resto.restaurant.address} </h4>
-	 <p class="hero__description"> ${resto.restaurant.description.substring(0, 200)} </p>
-	   <img class="hero__image" src="${CONFIG.BASE_IMAGE_URL + resto.restaurant.pictureId}" alt="${resto.name}">
+	 <img class="hero__image" src="${CONFIG.BASE_IMAGE_URL + resto.restaurant.pictureId}" alt="${resto.name}">
 	</section>
 `;
 
