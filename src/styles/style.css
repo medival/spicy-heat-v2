@@ -343,62 +343,6 @@ p.container__info_description {
   padding: 2em 0;
 }
 
-/* 
-  Category
-*/
-
-.resto__categories {
-  display: grid; 
-  grid-template-columns: repeat(auto-fit, minmax(80px, 300px));
-  justify-content: center;
-}
-
-.resto__category {
-  height: 200px;
-  /* width: 250px; */
-  border-radius:10px;
-  margin: 0 1em;
-  box-shadow: 5px 5px 11px  rgba(249, 249, 249, 1),
-    -5px -5px 11px  rgba(249, 249, 249, 1);
-  text-align: center; 
-  /* justify-content: center; */
-    /* align-content: center; */
-
-}
-
-.resto__categroy_icon {
-  color: whitesmoke;
-  background-color: #5B77F0;
-  width: 1.5em;
-  height: 1.5em;
-  margin: 0 auto;
-  justify-content: center;
-  border-radius: 1em;
-  top: -1em;
-  position: relative;
-  margin-bottom: 1em;
-}
-
-.category__icon_check {
-  margin-top: .2em;
-}
-
-.resto__category_image {
-  width: 5em;
-  height: 5em;
-  background-color: #5B77F0;
-  margin: 0 auto;
-  border-radius: 2.5em;
-}
-
-.resto__category_name {
-  font-size: large;
-  color: #5E607C;
-  font-weight: bold;
-  position: relative;
-  bottom: -30px;
-}
-
 /* Food */
 
 .resto__foodies {
