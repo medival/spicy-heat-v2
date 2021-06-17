@@ -9,6 +9,20 @@ const createHeroTemplate = (resto) => `
 	</section>
 `;
 
+const createRestoCardOverview = (resto) => `
+	<div class="container__image">
+	    <img src="${CONFIG.BASE_IMAGE_URL + resto.restaurant.pictureId}" class="container__image_overview" alt="${resto.name}">
+	</div>
+	<div class="container__info">
+	    <h2 class="container__info_header"> ${resto.restaurant.name} </h2>
+	    <h4 class="container__info_subheader"> ${resto.restaurant.address} di ${resto.restaurant.city} </h4>
+	    <p class="container__info_rating"> <i class="fa fa-star"></i> ${resto.restaurant.rating} </p>
+	    <p class="container__info_resto_categories" id="container__info_categories">
+			</p>
+	    <p class="container__info_description"> ${resto.restaurant.description} </p>
+	</div>
+`;
+
 const createAvailableFoodsMenu = (food, foodsImages) => `
 		<div class="resto__foodies">
 			<div class="resto__food_icon">
@@ -95,6 +109,7 @@ export {
   createHeroTemplate,
   createCategoriesRestoTemplate,
   createRestoItemTemplate,
+  createRestoCardOverview,
   createAvailableFoodsMenu,
   createAvailableDrinksMenu,
   createCustomerReview,
