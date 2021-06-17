@@ -37,7 +37,7 @@ const createAvailableFoodsMenu = (food, dummy) => `
 					${food.name} 
 				</div>
 				<div class="resto__food_price">
-					${dummy.price} 
+					${dummy.foodPrice} 
 				</div>
 			</div>
 		</div>
@@ -55,7 +55,7 @@ const createAvailableDrinksMenu = (drink, dummy) => `
 					${drink.name} 
 				</div>
 				<div class="resto__drink_price">
-					${dummy.price} 
+					${dummy.drinkPrice} 
 				</div>
 			</div>
 		</div>
