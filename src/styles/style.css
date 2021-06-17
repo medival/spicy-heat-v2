@@ -254,8 +254,8 @@ main {
 
 .resto__info_container {
   position: relative;
-  top: -3em;
-  left: .5em;
+  top: -48%;
+  left: 85%;
   z-index: 1;
   color: var(--white-color);
   font-size: large;
@@ -267,13 +267,19 @@ main {
   padding: .4em;
 }
 
+.resto__info_container h4 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
 .resto__selector {
 	text-decoration: none;
 }
 
 .resto__title {
-  margin: 0.5em 0;
+  margin: -1em 0 0.5em 0;
   color: var(--primary-color);
 	text-decoration: none
 }
@@ -478,20 +484,26 @@ main {
 
 figure {
   margin: 2em .5em;
-  border: 1px solid #f1f1f1;
-  padding: 10px;
+  padding: 5px;
+  height: 400px;
 }
 
 figure img {
   width: 100%;
   height: 200px;
   object-fit: cover;
+  border-radius: .25em;
 }
 
-figure:hover {
+figure img:hover {
+  transform: scale(1.025);
   box-shadow: 5px 5px 11px #d9d9d9,
     -5px -5px 11px #e7e7e7;
 }
+/* figure:hover {
+  box-shadow: 5px 5px 11px #d9d9d9,
+    -5px -5px 11px #e7e7e7;
+} */
 
 figure p {
   line-height: 1.5em;

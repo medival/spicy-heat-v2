@@ -9,6 +9,10 @@
 		height: 40vh;
 	}
 
+	.resto__label {
+		margin-top: 2em;
+	}
+
 	.hero__title {
 		font-size: x-large;
 	}
@@ -40,6 +44,7 @@
   width: 85.5vw;
 	}
 }
+
 @media screen and (min-width: 651px) {
 	.resto__container {
     width: 90%;
@@ -90,6 +95,10 @@
 
 	.hero__description {
 		font-size: small;
+	}
+
+	.resto__label {
+		margin-top: 2em;
 	}
 
   .resto__list {
@@ -164,6 +173,10 @@
 	.hero {
 		margin-top: 3.8rem;
 		height: 50vh;
+	}
+
+	.resto__label {
+		margin-top: 0;
 	}
 
 	.resto__list {
