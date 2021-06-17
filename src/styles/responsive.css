@@ -40,10 +40,6 @@
 		min-width: 180px;
 	}
 
-	#review {
-  width: 85.5vw;
-	}
-
 	.container__image {
     display: none;
 	}
@@ -118,10 +114,6 @@
 	.resto__list__menu {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
-	}
-
-	#review {
-  	width: 86vw;
 	}
 }
 
@@ -209,10 +201,6 @@
 	.resto__overview__container {
 		width: 60vw;
 	}
-
-	#review {
-  	width: 78vw;
-	}
 }
 
 @media screen and (min-width: 1600px) {
@@ -232,9 +220,5 @@
 
 	figure.resto__menu__food {
 		min-width: 200px;
-	}
-
-	#review {
-  	width: 69vw;
 	}
 }
