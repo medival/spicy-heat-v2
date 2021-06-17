@@ -8,6 +8,7 @@ import {
   createAvailableFoodsMenu,
   createAvailableDrinksMenu,
   createCustomerReview,
+  createRestoCardOverview,
 } from '../templates/template-creator';
 import LikeButtonInitiator from '../../utils/like-button-initiator';
 
@@ -17,6 +18,8 @@ const Detail = {
       <section id="resto"> </section>
       <section id="categories"> </section>
       <section class="resto">
+        <div class="resto__overview__container" id="restoOverview">
+        </div>
         <div class="resto__container">
           <h2 class="resto__label"> Restaurant Categories </h2>
           <div class="resto__categories" id="restoCategories">
@@ -51,6 +54,9 @@ const Detail = {
 
     const restoContainer = document.querySelector('#resto');
     restoContainer.innerHTML += createHeroTemplate(detailResto);
+
+    const restoOverview = document.querySelector('#restoOverview');
+    restoOverview.innerHTML += createRestoCardOverview(detailResto);
 
     const categoriesContaier = document.querySelector('#restoCategories');
     results.categories.forEach((category) => {
