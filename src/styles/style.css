@@ -300,7 +300,7 @@ p.container__info_description {
 
 .resto__info_container {
   position: relative;
-  top: -48%;
+  top: -55%;
   left: 85%;
   z-index: 1;
   color: var(--white-color);
@@ -475,7 +475,7 @@ p.container__info_description {
 figure {
   margin: 2em .5em;
   padding: 5px;
-  height: 400px;
+  height: 350px;
 }
 
 figure img {
