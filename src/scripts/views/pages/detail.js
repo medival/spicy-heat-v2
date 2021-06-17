@@ -4,7 +4,6 @@ import EXTRA from '../../DATA';
 
 import {
   createHeroTemplate,
-  createCategoriesRestoTemplate,
   createAvailableFoodsMenu,
   createAvailableDrinksMenu,
   createCustomerReview,
@@ -20,11 +19,6 @@ const Detail = {
       <section id="categories"> </section>
       <section class="resto">
         <div class="resto__overview__container" id="restoOverview">
-        </div>
-        <div class="resto__container">
-          <h2 class="resto__label"> Restaurant Categories </h2>
-          <div class="resto__categories" id="restoCategories">
-          </div>
         </div>
         <div class="resto__container">
           <h2 class="resto__label"> Available Foods Menu </h2>
@@ -59,10 +53,8 @@ const Detail = {
     const restoOverview = document.querySelector('#restoOverview');
     restoOverview.innerHTML += createRestoCardOverview(detailResto);
 
-    const categoriesContaier = document.querySelector('#restoCategories');
     const containerInfoCategories = document.querySelector('#container__info_categories');
     results.categories.forEach((category) => {
-      categoriesContaier.innerHTML += createCategoriesRestoTemplate(category);
       containerInfoCategories.innerHTML += createSpanCategories(category);
     });
 
