@@ -25,28 +25,38 @@ const createSpanCategories = (category) => `
 	<span> ${category.name} </span>
 `;
 
-const createAvailableFoodsMenu = (food, foodsImages) => `
+const createAvailableFoodsMenu = (food, dummy) => `
 		<div class="resto__foodies">
 			<div class="resto__food_icon">
 			</div>
 			<div class="resto__food_image">
-				<img src="${foodsImages}" alt="${food.name}" srcset="">
+				<img src="${dummy.food}" alt="${food.name}" srcset="">
 			</div>
-			<div class="resto__food_name">
-				${food.name}
+			<div class="resto__food_info">
+				<div class="resto__food_name">
+					${food.name} 
+				</div>
+				<div class="resto__food_price">
+					${dummy.price} 
+				</div>
 			</div>
 		</div>
 `;
 
-const createAvailableDrinksMenu = (drink, drinkImages) => `
+const createAvailableDrinksMenu = (drink, dummy) => `
 		<div class="resto__drinkies">
 			<div class="resto__drink_icon">
 			</div>
 			<div class="resto__drink_image">
-				<img src="${drinkImages}" alt="${drink.name}" srcset="">
+				<img src="${dummy.drink}" alt="${drink.name}" srcset="">
 			</div>
-			<div class="resto__drink_name">
-				${drink.name}
+			<div class="resto__drink_info">
+				<div class="resto__drink_name">
+					${drink.name} 
+				</div>
+				<div class="resto__drink_price">
+					${dummy.price} 
+				</div>
 			</div>
 		</div>
 `;
