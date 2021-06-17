@@ -81,9 +81,9 @@ var serviceWorkerOption = {
     "/assets/icon/mstile-150x150.png",
     "/assets/icon/mstile-310x310.png",
     "/assets/icon/mstile-70x70.png",
-    "/assets/images/heros/hero-image_2.jpg",
     "/assets/images/logo/favicon.png",
     "/assets/images/logo/logo.png",
+    "/assets/images/heros/hero-image_2.jpg",
     "/index.html"
   ]
 };
