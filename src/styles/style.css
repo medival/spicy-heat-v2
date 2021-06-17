@@ -231,6 +231,52 @@ main {
   background-color: var(--white-color);
 }
 
+.resto__overview__container {
+  position: relative;
+  /* width: 60vw; */
+  margin: 0 auto;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: .5em;
+  display: grid;
+  top: -5em;
+   grid-template-columns: 300px auto;
+  backdrop-filter: blur(6px);
+}
+
+.resto__overview__container .container__image {
+  margin: 1em;
+}
+
+img.container__image_overview {
+  width: 15em;
+  height: 100%;
+  object-fit: cover;
+}
+
+.container__info {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  margin: 2em 2em 2em 0;
+  color: var(--white-color);
+}
+
+.container__info_resto_categories span {
+  background-color: var(--twitter-color);
+  padding: 5px 20px;
+  border-radius: 15px;
+  margin: 0 .15em;
+}
+
+.container__info_rating i {
+  color: gold;
+}
+
+p.container__info_description {
+  line-height: 25px;
+}
+
 .resto__label {
   text-align: center;
   margin-bottom: 1em;
