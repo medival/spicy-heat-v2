@@ -9,6 +9,7 @@ import {
   createAvailableDrinksMenu,
   createCustomerReview,
   createRestoCardOverview,
+  createSpanCategories,
 } from '../templates/template-creator';
 import LikeButtonInitiator from '../../utils/like-button-initiator';
 
@@ -59,8 +60,10 @@ const Detail = {
     restoOverview.innerHTML += createRestoCardOverview(detailResto);
 
     const categoriesContaier = document.querySelector('#restoCategories');
+    const containerInfoCategories = document.querySelector('#container__info_categories');
     results.categories.forEach((category) => {
       categoriesContaier.innerHTML += createCategoriesRestoTemplate(category);
+      containerInfoCategories.innerHTML += createSpanCategories(category);
     });
 
     const foodsMenuContainer = document.querySelector('#foodsMenu');
