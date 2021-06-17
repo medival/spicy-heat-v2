@@ -60,12 +60,12 @@ const Detail = {
 
     const foodsMenuContainer = document.querySelector('#foodsMenu');
     results.menus.foods.forEach((food, index = 0) => {
-      foodsMenuContainer.innerHTML += createAvailableFoodsMenu(food, EXTRA.resto[index].food);
+      foodsMenuContainer.innerHTML += createAvailableFoodsMenu(food, EXTRA.resto[index]);
     });
 
     const drinksMenuContainer = document.querySelector('#drinksMenu');
     results.menus.drinks.forEach((drink, index = 0) => {
-      drinksMenuContainer.innerHTML += createAvailableDrinksMenu(drink, EXTRA.resto[index].drink);
+      drinksMenuContainer.innerHTML += createAvailableDrinksMenu(drink, EXTRA.resto[index]);
     });
 
     const reviewerContainer = document.querySelector('#review');
