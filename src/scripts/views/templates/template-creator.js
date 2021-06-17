@@ -23,6 +23,10 @@ const createRestoCardOverview = (resto) => `
 	</div>
 `;
 
+const createSpanCategories = (category) => `
+	<span> ${category.name} </span>
+`;
+
 const createAvailableFoodsMenu = (food, foodsImages) => `
 		<div class="resto__foodies">
 			<div class="resto__food_icon">
@@ -115,4 +119,5 @@ export {
   createCustomerReview,
   createLikeButtonTemplate,
   createLikedButtonTemplate,
+  createSpanCategories,
 };
