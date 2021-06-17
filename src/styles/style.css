@@ -259,7 +259,7 @@ main {
   z-index: 1;
   color: var(--white-color);
   font-size: large;
-	background-color: gold;
+	background-color: var(--primary-color);
 	width: 1.2em;
   height: 1.2em;
   border-radius: 1em;
