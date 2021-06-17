@@ -395,7 +395,13 @@ p.container__info_description {
   height: 10em;
 }
 
-.resto__food_name {
+.resto__food_info {
+  display: grid;
+  grid-template-rows:  1fr;
+  gap: .5em;
+}
+
+.resto__food_name, .resto__food_price {
   font-size: large;
   color: #5E607C;
   font-weight: bold;
@@ -449,7 +455,6 @@ p.container__info_description {
 
 .resto__drink_image {
   margin: 0 auto;
-  /* border-radius: 2.5em; */
 }
 
 .resto__drink_image img {
@@ -457,7 +462,13 @@ p.container__info_description {
   height: 10em;
 }
 
-.resto__drink_name {
+.resto__drink_info {
+  display: grid;
+  grid-template-rows:  1fr;
+  gap: .5em;
+}
+
+.resto__drink_name, .resto__drink_price {
   font-size: large;
   color: #5E607C;
   font-weight: bold;
